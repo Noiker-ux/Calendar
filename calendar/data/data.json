@@ -1,0 +1,29 @@
+datass = [
+    {
+        "title": "example",
+        "label": "Personal",
+        "StartDate": "2023-04-21 12:00",
+        "EndDate": "2023-04-25 12:00",
+        "EventURL": "",
+        "Location": "",
+        "Description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+    },
+    {
+        "title": "tea",
+        "label": "ETC",
+        "StartDate": "2023-04-23 12:00",
+        "EndDate": "2023-04-30 12:00",
+        "EventURL": "",
+        "Location": "",
+        "Description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+    },
+    {
+        "title": "Шашлыки",
+        "label": "ETC",
+        "StartDate": "2023-05-01 12:00",
+        "EndDate": "2023-05-01 12:00",
+        "EventURL": "",
+        "Location": "",
+        "Description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+    }
+]

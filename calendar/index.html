@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>N-EV Calendar</title>
+</head>
+<body>
+    <main class="container">
+        <div class="calendar">
+            <div class="left-panel-calendar">
+                <div class="addNewEvent">
+                    <button type="button" class="addNewEvent-btn"><span>+</span><span>Add Event</span></button>
+                </div>
+                <div class="calendar-mini">
+                    <div class="calendar-mini-header">
+                        <span class="activeMonth"></span>
+                        <span class="activeYear"></span>
+                        <div class="navigation-Month">
+                            <span class="prevMonth small-calendar-arrow"><</span>
+                            <span class="nextMonth small-calendar-arrow">></span>
+                        </div>
+                    </div>
+                    <div class="calendar-mini-body">
+                    </div>
+                </div>
+                <div class="calendar-left-filter">
+                    <span class="calendar-left-filter-title">Filter</span>
+                    <ul class="calendar-left-list">
+                        <li class="calendar-left-item"><input filter="ViewAll" class="calendar-left-checkbox calendar-left-checkbox-ViewAll" type="checkbox" name="" value="ViewAll" id="ViewAllCalendarLeft" checked><label class='calendar-left-filter-label' for="ViewAllCalendarLeft">View All</label></li>
+                        <li class="calendar-left-item"><input filter="Personal" class="calendar-left-checkbox calendar-left-checkbox-Personal" type="checkbox" name="" value="Personal" id="PersonalCalendarLeft" checked><label class='calendar-left-filter-label' for="PersonalCalendarLeft">Personal</label></li>
+                        <li class="calendar-left-item"><input filter="Business" class="calendar-left-checkbox calendar-left-checkbox-Business" type="checkbox" name="" value="Business" id="BusinessCalendarLeft" checked><label class='calendar-left-filter-label' for="BusinessCalendarLeft">Business</label></li>
+                        <li class="calendar-left-item"><input filter="Family" class="calendar-left-checkbox calendar-left-checkbox-Family" type="checkbox" name="" value="Family" id="FamilyCalendarLeft" checked><label class='calendar-left-filter-label' for="FamilyCalendarLeft">Family</label></li>
+                        <li class="calendar-left-item"><input filter="Holiday" class="calendar-left-checkbox calendar-left-checkbox-Holiday" type="checkbox" name="" value="Holiday" id="HolidayCalendarLeft" checked><label class='calendar-left-filter-label' for="HolidayCalendarLeft">Holiday</label></li>
+                        <li class="calendar-left-item"><input filter="ETC" class="calendar-left-checkbox calendar-left-checkbox-ETC" type="checkbox" name="" value="ETC" id="ETCCalendarLeft" checked><label class='calendar-left-filter-label' for="ETCCalendarLeft">ETC</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-main-block-calendar">
+                    <div class="right-block-header-calendar">
+                        <div class="right-block-header-calendar-l">
+                            <div class="right-block-header-navigation">
+                                <span class="prevMonth-big big-calendar-arrow"><</span>
+                                <span class="nextMonth-big big-calendar-arrow">></span>
+                            </div>
+                            <span class="right-block-header-title"><span class="activeMonthBig"></span><span class="activeYearBig"></span></span>
+                        </div>
+                        <div class="right-block-header-filter">
+                            <button type="button" class="right-block-header-filter-btn">Month</button>
+                            <button type="button" class="right-block-header-filter-btn">Week</button>
+                            <button type="button" class="right-block-header-filter-btn">Day</button>
+                            <button type="button" class="right-block-header-filter-btn">List</button>
+                        </div>
+                    </div>
+                    <div class="right-block-main-calendar">
+                    </div>
+            </div>
+            <div class="addEventMenu">
+                <div class="addEventMenu__head">
+                    <span class="addEventMenu__head-title">Add Event</span>
+                    <button type="button" class="closeBtn"><span class="close-cross"></span></button>
+                </div>
+                <div class="addEventMenu__body">
+                    <div class="wrapper">    
+                        <input type="text" name="AddNewEvent-title" id="AddNewEvent-title" class="InputForLabel addEventMenu__body-title" required />
+                        <label for="AddNewEvent-title" class="labelAndPlaceholder">Title</label>
+                    </div>
+                    <div class="wrapper">
+                        <select id="AddNewEvent-label" name="AddNewEvent-label" class="addEventMenu__body-label InputForLabel">
+                        </select>
+                        <label for="AddNewEvent-label" id='selectLabel'class="labelAndPlaceholder">Label</label>
+                    </div>
+                    <div class="wrapper">
+                        <input type="date" name="AddNewEvent-startDate" id="AddNewEvent-startDate" class="InputForLabel addEventMenu__body-StartDate" value="">
+                        <label for="AddNewEvent-startDate" class="labelAndPlaceholder">Start Date</label>
+                    </div>
+                    <div class="wrapper">
+                        <input type="date" name="AddNewEvent-endDate" id="AddNewEvent-endDate" class="InputForLabel addEventMenu__body-EndDate">
+                        <label for="AddNewEvent-endDate" class="labelAndPlaceholder">End Date</label>
+                    </div>
+                    <div class="wrapper">
+                        <input type="url" name="AddNewEvent-EventURL" id="AddNewEvent-EventURL"  class="InputForLabel addEventMenu__body-EventURL">
+                        <label for="AddNewEvent-EventURL" class="labelAndPlaceholder">Event URL</label>
+                    </div>
+                    <div class="wrapper">
+                        <input type="text" name="AddNewEvent-Location" id="AddNewEvent-Location" class="InputForLabel addEventMenu__body-Location">
+                        <label for="AddNewEvent-Location" class="labelAndPlaceholder">Location</label>
+                    </div>
+                    <div class="wrapper">
+                        <textarea name="AddNewEvent-Description" id="AddNewEvent-Description" cols="30" rows="10"  class="InputForLabel addEventMenu__body-desc"></textarea>
+                        <label for="AddNewEvent-Description" class="labelAndPlaceholder">Description</label>
+                    </div>
+                    <div class="addEventMenu__body-buttons">
+                        <button type="button" class="addEventMenu__body-inp addEventMenu__body-send">Submit</button>
+                        <button type="button" class="addEventMenu__body-inp addEventMenu__body-close">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div class="stillOpacity"></div>
+        </div>
+    </main>
+    <script type="text/javascript" src="./data/data.json"></script>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
